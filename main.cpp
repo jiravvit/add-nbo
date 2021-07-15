@@ -1,7 +1,7 @@
 #include <stddef.h> // for size_t
 #include <stdint.h> // for uint8_t
 #include <stdio.h> // for printf
-#include <netinet/in.h>
+#include <netinet/in.h> // for ntohl
 
 
 int main(int argc, char** argv) {
@@ -24,9 +24,11 @@ int main(int argc, char** argv) {
         return 0;
     }
 
+    // file read
     fread(&buf, 1, 4, fd);
     fread(&buf2, 1, 4, fd2);
 
+    // NBO
     uint32_t num = ntohl(buf);
     uint32_t num2 = ntohl(buf2);
 
