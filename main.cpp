@@ -32,10 +32,9 @@ int main(int argc, char** argv) {
 
     uint32_t add = num + num2;
 
-    // TODO : 입력 포맷 맞추기
-    printf("0x%x\n", num);
-    printf("0x%x\n", num2);
-    printf("0x%x\n", add);
+    // 1000(0x3e8) + 500(0x1f4) = 1500(0x5dc)
+    printf("%d(0x%x) + %d(0x%x) = %d(0x%x)\n", num, num, num2, num2, add, add );
+
 
     return 0;
 }
